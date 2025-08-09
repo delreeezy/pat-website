@@ -1,0 +1,93 @@
+:root{
+  --bg:#ffffff;
+  --text:#1f2937;
+  --muted:#4b5563;
+  --accent:#0d6efd;
+  --accent-contrast:#ffffff;
+  --border:#e5e7eb;
+  --surface:#f8fafc;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+}
+
+header{
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+}
+.container{
+  max-width:980px;
+  margin:0 auto;
+  padding:0 16px;
+}
+.site-header{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 0 8px;
+}
+.site-header h1{ font-size:1.3rem; margin:.25rem 0 }
+.tagline{ color:var(--muted); margin:0; font-size:.95rem }
+
+nav{ border-top:1px solid var(--border) }
+nav ul{
+  list-style:none; margin:0; padding:0;
+  display:flex; gap:12px; flex-wrap:wrap;
+}
+nav a{
+  display:inline-block; padding:10px 6px; text-decoration:none; color:var(--text);
+}
+nav a[aria-current="page"]{
+  color:var(--accent); font-weight:600; border-bottom:2px solid var(--accent);
+}
+
+main{ padding:18px 0 }
+section{ padding:12px 0; border-bottom:1px solid var(--border) }
+section:last-of-type{ border-bottom:none }
+
+h2{ font-size:1.25rem; margin:.25rem 0 .5rem }
+h3{ font-size:1.05rem; margin:.9rem 0 .25rem }
+.lead{ color:var(--muted); margin-top:0 }
+
+.callout{
+  background:var(--surface);
+  border:1px solid var(--border);
+  padding:12px;
+  border-radius:8px;
+}
+
+.button{
+  display:inline-block; background:var(--accent); color:var(--accent-contrast);
+  padding:.55rem .85rem; border-radius:6px; text-decoration:none; font-weight:600;
+}
+.button.secondary{
+  background:transparent; color:var(--accent); border:1px solid var(--accent);
+}
+
+.grid{ display:grid; gap:16px }
+@media(min-width:800px){ .cols-2{ grid-template-columns:1fr 1fr } }
+
+.figure{
+  border:1px solid var(--border); border-radius:8px; padding:8px; background:#fff;
+}
+.figure img{ width:100%; height:auto; display:block; border-radius:4px }
+.figure figcaption{
+  font-size:.9rem; color:var(--muted); margin-top:.35rem;
+}
+
+table{
+  width:100%; border-collapse:collapse; margin:.5rem 0 1rem;
+}
+th, td{ padding:.55rem .5rem; border:1px solid var(--border); vertical-align:top }
+th{ background:var(--surface); text-align:left }
+
+footer{
+  border-top:1px solid var(--border);
+  padding:14px 0; color:var(--muted); font-size:.95rem;
+}
+.footer-links{ display:flex; gap:14px; flex-wrap:wrap }
